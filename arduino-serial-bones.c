@@ -33,7 +33,7 @@ int main()
     char buf[buf_max];
     int rc,n;
     
-    serialport = "/dev/ttyACM0"
+    serialport = "/dev/ttyACM0";
     
     while(1) {
                            
