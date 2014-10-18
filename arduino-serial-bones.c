@@ -25,7 +25,7 @@ int main()
     const int buf_max = 256;
 
     int fd = -1;
-    char serialport[buf_max];
+    char serialport = '/dev/ttyACM0';
     int baudrate = 115200;  // default
     char quiet=0;
     char eolchar = '\n';
@@ -33,7 +33,7 @@ int main()
     char buf[buf_max];
     int rc,n;
     
-    serialport = "/dev/ttyACM0";
+
     
     while(1) {
                            
