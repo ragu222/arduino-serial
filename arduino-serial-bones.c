@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     const int buf_max = 256;
 
     int fd = -1;
-    char serialport[buf_max];
+    char serialport[buf_max] = /dev/ttyACM0;
     int baudrate = 115200;  // default
     char quiet=0;
     char eolchar = '\n';
@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
     int rc,n;
     
     while(1) {
+                           
             if( fd == -1 ) error("serial port not opened");
             memset(buf,0,buf_max);  //
             serialport_read_until(fd, buf, eolchar, buf_max, timeout);
