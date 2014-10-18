@@ -20,18 +20,20 @@
 
 #include "arduino-serial-lib.h"
 
-int main(int argc, char *argv[])
+int main()
 {
     const int buf_max = 256;
 
     int fd = -1;
-    char serialport[buf_max] = "/dev/ttyACM0";
+    char serialport[buf_max];
     int baudrate = 115200;  // default
     char quiet=0;
     char eolchar = '\n';
     int timeout = 5000;
     char buf[buf_max];
     int rc,n;
+    
+    serialport = "/dev/ttyACM0"
     
     while(1) {
                            
