@@ -32,10 +32,6 @@ int main(int argc, char *argv[])
     int timeout = 5000;
     char buf[buf_max];
     int rc,n;
-
-    if (argc==1) {
-        usage();
-    }
     
     while(1) {
             if( fd == -1 ) error("serial port not opened");
